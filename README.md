@@ -59,17 +59,21 @@ Here are the primary measures used to power the key performance indicators:
 ### 1. Year-Over-Year Sales Growth (%)
 Calculates how much total sales grew compared to the previous year:
 
+```text
 Sales YOY Growth % = 
    VAR SalesCurrentYear = [Total Sales]
    VAR SalesPriorYear = CALCULATE([Total Sales], SAMEPERIODLASTYEAR('Dim_Calendar'[Date]))
    RETURN
    DIVIDE(SalesCurrentYear - SalesPriorYear, SalesPriorYear, 0)
+```
 
 ### 2. Profit Margin (%)
 Shows how much profit is kept from every dollar of revenue:
 
+```text
 Profit Margin % = 
 DIVIDE([Gross Profit], [Total Sales], 0)
+```
 
 ---
 
